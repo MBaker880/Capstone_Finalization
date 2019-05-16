@@ -14,20 +14,23 @@ html, body {
 
 /* Navigation Styles */
 
-header > nav {
+nav {
+    position: relative;
     display: table;
     width: 85%;
     float: right;
     padding-top: 26px;
 }
 
-header > nav > ul {
+nav > ul {
+    position: relative;
     display: table-row;
     list-style-type: none;
     background-image: linear-gradient(to right, rgb(250, 146, 11) , rgb(250, 177, 41) , rgb(245, 205, 146));
 }
 
-header > nav > ul > li {
+nav > ul > li {
+    position: relative;
     display: table-cell;
     text-align: center;
     padding: 7px 0px 7px 0px;
@@ -35,12 +38,13 @@ header > nav > ul > li {
     float: left;
 }
 
-header > nav > ul > li > a{
+nav > ul > li > a{
+    position: relative;
     text-decoration: none;
     color: black;
 }
 
-header > nav > ul > li > a:hover {
+nav > ul > li > a:hover {
     color: whitesmoke;
 }
 
@@ -78,7 +82,7 @@ header > nav > ul > li > a:hover {
 /* Student 1 Image Styles */
 .studentOne-img {
     /* The image used */
-    background-image: url("technician.JPG");
+    background-image: url("technicianImg.JPG");
     min-height: 400px;
 
     /* Center and scale the image nicely */
@@ -201,16 +205,33 @@ h1 {
 
 /* Media Query for mobile and tablet devices */
 
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:480px) {
 
     #navImg {
         display: none;
+    }
+
+    nav {
+        width: 100%;
+        padding: 0px;
+    }
+
+    nav::after {
+        clear: both;
+        content: "";
+        display: table;
     }
 
     nav li {
         display: block;
         float: left;
         width: 20%;
+    }
+
+    nav ul li::after {
+        clear: both;
+        content: "";
+        display: table;
     }
 
     nav ul li {
@@ -224,5 +245,4 @@ h1 {
         color: black;
         font-size: 15px;
     }
-
 }
