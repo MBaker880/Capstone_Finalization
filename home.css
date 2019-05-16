@@ -1,0 +1,228 @@
+/* HTML Styles */
+
+html {
+    background: fixed linear-gradient(to bottom ,white 20%, black 100%);
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+html, body {
+    height: 100%;
+}
+
+/* Navigation Styles */
+
+header > nav {
+    display: table;
+    width: 85%;
+    float: right;
+    padding-top: 26px;
+}
+
+header > nav > ul {
+    display: table-row;
+    list-style-type: none;
+    background-image: linear-gradient(to right, rgb(250, 146, 11) , rgb(250, 177, 41) , rgb(245, 205, 146));
+}
+
+header > nav > ul > li {
+    display: table-cell;
+    text-align: center;
+    padding: 7px 0px 7px 0px;
+    width: 20%;
+    float: left;
+}
+
+header > nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+header > nav > ul > li > a:hover {
+    color: whitesmoke;
+}
+
+#sideNav {
+    display: none;
+}
+
+/* Icon Styles */
+
+#navIcon {
+    display: none;
+    color: black;
+}
+
+/* Logo Styles */
+
+#navImg {
+    max-width: 15%;
+}
+
+/*Campus Image Styles*/
+
+.campus-img {
+    /* The image used */
+    background-image: url("campus.JPG");
+    min-height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Student 1 Image Styles */
+.studentOne-img {
+    /* The image used */
+    background-image: url("technician.JPG");
+    min-height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hosa-img {
+    /* The image used */
+    background-image: url("hosaComp.jpg");
+    min-height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.contact-img {
+    /* The image used */
+    background-image: url("contactImg.jpg");
+    min-height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.services-img {
+    /* The image used */
+    background-image: url("servicesImg.jpg");
+    min-height: 400px;
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+/* Add Styles to the Home and Hosa Containers */
+.home_container, .hosa_container, .services_container {
+    position: absolute;
+    right: 0;
+    margin: 30px 20px;
+    max-width: 320px;
+    padding: 30px;
+    background-color: white;
+}
+
+/* About and Contact Container Styles */
+
+.about_container, .contact_container {
+    position: absolute;
+    left: 0;
+    margin: 30px 20px;
+    max-width: 320px;
+    padding: 30px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+input[type=text],
+input[type=password] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus,
+input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Form Styles */
+
+form > p:first-of-type {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    padding: 3px;
+}
+
+form > p:last-of-type {
+    font-size: 16px;
+    font-family: 'Nanum Gothic', sans-serif;
+    padding: 3px;
+}
+
+/* Set a style for the submit button */
+.btn {
+    background-image: linear-gradient(to right, rgb(250, 138, 11) , rgb(250, 177, 41) , rgb(245, 205, 146));
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.btn:hover {
+    opacity: 1;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+/* Media Query for mobile and tablet devices */
+
+@media only screen and (max-width:420px) {
+
+    #navImg {
+        display: none;
+    }
+
+    nav li {
+        display: block;
+        float: left;
+        width: 20%;
+    }
+
+    nav ul li {
+        text-align: center;
+        list-style: none;
+        padding: 0px 50px 5px 50px;
+        width: 100%;
+    }
+	
+    nav ul li a {
+        color: black;
+        font-size: 15px;
+    }
+
+}
