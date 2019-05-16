@@ -215,4 +215,9 @@ legend {
         width: 75px;
     }
 
+    legend {
+        float: left;
+        padding-left: 110px;
+    }
+
 }

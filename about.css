@@ -10,20 +10,20 @@ html {
 
 /* Navigation Styles */
 
-header > nav {
+nav {
     display: table;
     width: 85%;
     float: right;
     padding-top: 26px;
 }
 
-header > nav > ul {
+nav > ul {
     display: table-row;
     list-style-type: none;
     background-image: linear-gradient(to right, rgb(250, 146, 11) , rgb(250, 177, 41) , rgb(245, 205, 146));
 }
 
-header > nav > ul > li {
+nav > ul > li {
     display: table-cell;
     text-align: center;
     padding: 7px 0px 7px 0px;
@@ -31,17 +31,124 @@ header > nav > ul > li {
     float: left;
 }
 
-header > nav > ul > li > a{
+nav > ul > li > a{
     text-decoration: none;
     color: black;
 }
 
-header > nav > ul > li > a:hover {
+nav > ul > li > a:hover {
     color: whitesmoke;
+}
+
+legend {
+    position: relative;
+    font-size: 1.8em;
+    margin-right: auto;
+    margin-left: auto;
+    color: rgb(248, 158, 74);
+    padding: 0px 15px;
+}
+
+.requirements, .jobs {
+    border: solid rgb(243, 175, 96);
+    padding: 20px;
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+fieldset.together {
+    border: solid rgb(243, 175, 96);
+    width: 87.8%;
+    margin: auto;
+    padding: 0px;
+}
+
+fieldset.left {
+    position: relative;
+    width: 47.3%;
+    float: left;
+    border: none;
+    padding: 15px 15px 15px 5px;
+}
+
+fieldset.right {
+    position: relative;
+    width: 47.3%;
+    float: right;
+    border: none;
+    border-left: dotted rgb(243, 175, 96);
+    padding: 15px 15px 10px 22px;
+    height: 100%;
+}
+
+p {
+    font-size: 20px;
+    color: rgb(255, 184, 117);
 }
 
 /* Logo Styles */
 
-.navImg {
+#navImg {
     max-width: 15%;
+}
+
+/* Media Query for mobile and tablet devices */
+
+@media only screen and (max-width:480px) {
+
+    html {
+        background: rgba(245, 245, 245, 0.884);
+    }
+
+    #navImg {
+        display: none;
+    }
+
+    nav {
+        width: 100%;
+        padding: 0px;
+    }
+
+    nav::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
+    nav li {
+        display: block;
+        float: left;
+        width: 20%;
+    }
+
+    nav ul li::after {
+        clear: both;
+        content: "";
+        display: table;
+    }
+
+    nav ul li {
+        text-align: center;
+        list-style: none;
+        width: 100%;
+    }
+	
+    nav ul li a {
+        color: black;
+        font-size: 15px;
+    }
+
+    fieldset.left {
+        float: left;
+        border: none;
+        width: 90%;
+        padding-left: 22px; 
+    }
+
+    fieldset.right {
+        float: left;
+        border: none;
+        width: 90%;
+    }
 }
