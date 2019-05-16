@@ -1,0 +1,47 @@
+/* HTML Styles */
+
+html {
+    background: fixed linear-gradient(to bottom ,white 20%, black 100%);
+    background-size: 100%;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+/* Navigation Styles */
+
+header > nav {
+    display: table;
+    width: 85%;
+    float: right;
+    padding-top: 26px;
+}
+
+header > nav > ul {
+    display: table-row;
+    list-style-type: none;
+    background-image: linear-gradient(to right, rgb(250, 146, 11) , rgb(250, 177, 41) , rgb(245, 205, 146));
+}
+
+header > nav > ul > li {
+    display: table-cell;
+    text-align: center;
+    padding: 7px 0px 7px 0px;
+    width: 20%;
+    float: left;
+}
+
+header > nav > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+
+header > nav > ul > li > a:hover {
+    color: whitesmoke;
+}
+
+/* Logo Styles */
+
+.navImg {
+    max-width: 15%;
+}

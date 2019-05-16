@@ -3,29 +3,36 @@
 /* HTML Styles */
 
 html {
-    background: fixed linear-gradient(to bottom ,white 20%, black 100%);
+    background: fixed linear-gradient(to bottom ,white, rgb(126, 126, 126), black);
     background-size: 100%;
     width: 100%;
     height: 100%;
     position: relative;
 }
 
+html, body {
+    height: 100%;
+}
+
 /* Navigation Styles */
 
-header > nav {
+nav {
+    position: relative;
     display: table;
     width: 85%;
     float: right;
     padding-top: 26px;
 }
 
-header > nav > ul {
+nav > ul {
+    position: relative;
     display: table-row;
     list-style-type: none;
     background-image: linear-gradient(to right, rgb(250, 146, 11) , rgb(250, 177, 41) , rgb(245, 205, 146));
 }
 
-header > nav > ul > li {
+nav > ul > li {
+    position: relative;
     display: table-cell;
     text-align: center;
     padding: 7px 0px 7px 0px;
@@ -33,28 +40,26 @@ header > nav > ul > li {
     float: left;
 }
 
-header > nav > ul > li > a{
+nav > ul > li > a{
+    position: relative;
     text-decoration: none;
     color: black;
 }
 
-header > nav > ul > li > a:hover {
+nav > ul > li > a:hover {
     color: whitesmoke;
-}
-
-#navIcon {
-    display: none;
 }
 
 /* Logo Styles */
 
-.navImg {
+#navImg {
     max-width: 15%;
 }
 
 /*  Contact Form styles  */
 
 #contact-form {
+    position: relative;
     font-family: 'Lato', calibri, arial;
     font-size: 16px;
     font-weight: 300;
@@ -65,10 +70,9 @@ header > nav > ul > li > a:hover {
 
 #contact-area {
     width: 450px;
-    padding: 40px;
+    padding: 35px;
     margin-left: auto;
     margin-right: auto;
-    border: 2px dotted orange;
 }
 
 #contact-area input,
@@ -81,7 +85,7 @@ header > nav > ul > li > a:hover {
     color: rgb(250, 176, 115);
     background-color: transparent;
     border: 1px solid transparent;
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid rgb(243, 175, 96);;
     margin-bottom: 15px;
     height: 24px;
 }
@@ -91,7 +95,7 @@ header > nav > ul > li > a:hover {
     background-color: transparent;
     border-top: 1px solid transparent;
     border-left: 1px solid transparent;
-    border-bottom: 1px solid orange;
+    border-bottom: 1px solid rgb(243, 175, 96);;
     border-right: 1px solid transparent;
 }
 
@@ -104,7 +108,7 @@ header > nav > ul > li > a:hover {
 
 /* Submit button */
 
-#contact-area input.submit-button {
+#contact-area input.submitButton {
     font-family: 'Lato', calibri, arial;
     font-size: 12px;
     font-weight: 300;
@@ -112,7 +116,7 @@ header > nav > ul > li > a:hover {
     width: 100px;
     float: left;
     background-color: transparent;
-    border: 1px solid orange;
+    border: 1px solid rgb(243, 175, 96);;
     -moz-transition: all 0.1s ease-in-out;
     -webkit-transition: all 0.1s ease-in-out;
     -o-transition: all 0.1s ease-in-out;
@@ -120,21 +124,35 @@ header > nav > ul > li > a:hover {
     transition: all 0.1s ease-in-out;
 }
 
-#contact-area input.submit-button:hover {
+#contact-area input.submitButton:hover {
     color: #fff;
     background-color: #333;
 }
 
 legend {
-    font-size: 2em;
+    position: relative;
+    font-size: 1.8em;
     margin-right: auto;
     margin-left: auto;
-    padding-bottom: 30px; 
+    padding: 0px 10px; 
+    color: rgb(248, 158, 74);
+}
+
+.contact {
+    border: solid rgb(243, 175, 96);
+    padding: 20px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Mobile Styles */
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width:580px) {
+
+    html {
+        background: rgba(245, 245, 245, 0.884);
+    }
 
     #navImg {
         display: none;
@@ -166,7 +184,6 @@ legend {
     nav ul li {
         text-align: center;
         list-style: none;
-        padding: 0px 50px 5px 50px;
         width: 100%;
     }
 	
@@ -174,4 +191,28 @@ legend {
         color: black;
         font-size: 15px;
     }
+
+    .contact {
+        width: 2.8%;
+        margin: auto;
+    }
+
+    #contact-area input, #contact-area textarea {
+        width: 100;
+        font-size: 12px;
+        margin: 5px;
+    }
+
+    #contact-area {
+        padding: 0px
+    }
+
+    .contact {
+        border: none;
+    }
+
+    #contact-area input.submitButton {
+        width: 75px;
+    }
+
 }
